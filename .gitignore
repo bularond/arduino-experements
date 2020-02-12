@@ -1,3 +1,5 @@
 .vscode
 build
 *.swp
+.gitignore
+.DS_Store
