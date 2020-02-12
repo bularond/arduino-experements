@@ -1,4 +1,7 @@
+#pragma once
 #include "screen.h"
+#include "bluetooth.h"
+
 // Инклудим класс
 
 
