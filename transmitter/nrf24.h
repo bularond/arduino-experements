@@ -20,16 +20,17 @@ class nrf24{
             radio.setAutoAck(false);
             radio.powerUp();
             radio.openWritingPipe(PIPE);
+
             return true;
         }
 
-        void send_data(byte* data){
-            radio.write(data, sizeof(*data));
+        void send_data(byte data[], int len){
+            radio.write(data, len);
         }
 
-        void get_data(byte* data){
+        void get_data(byte* data, int len){
             if (radio.available())
-                radio.read(data, sizeof(*data));
+                radio.read(data, len);
             else
                 data = 0;
         }
